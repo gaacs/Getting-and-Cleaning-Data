@@ -66,4 +66,4 @@ allData = cbind(yData,subjectData,xData);
 tidyData = aggregate(allData[,names(allData) != c('activity','subject')],by=list(activity=allData$activity,subject = allData$subject),mean)
 
 # Export the tidyData set 
-write.table(tidyData, './tidyData.txt',row.names=TRUE,sep='\t')
+write.table(tidyData, './tidyData.txt',row.name=FALSE,sep='\t')
