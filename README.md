@@ -1,5 +1,5 @@
 # Getting-and-Cleaning-Data
-Course Project
+## Course Project
 
 This repo contains a:
 
