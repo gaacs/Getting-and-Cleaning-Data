@@ -2,6 +2,13 @@
 
 The script `run_analysis.R` performs the 5 steps described in the Getting and Cleaning Data course project's definition.
 
+# Source data
+
+All the process is applied over the UCI HAR Dataset downloaded from:
+https://d396qusza40orc.cloudfront.net/getdata%2Fprojectfiles%2FUCI%20HAR%20Dataset.zip
+
+# Steps
+
 * First, all the data is read into tables.
 * Then all the similar data from train and test samples is merged using the `rbind()` function. Meaning by similar those files having the same number of columns and referring to the same entities.
 * Then only those columns with the mean and standard deviation measures are taken from the X variables dataset.
