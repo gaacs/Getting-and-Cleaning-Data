@@ -42,7 +42,7 @@ xData       = rbind(xTrain,xTest)
 # Get only columns with mean or std in their names
 reqFeatures <- grep("-(mean|std)\\(\\)", features[, 2])
 
-# subset the x set with the required columns
+# Subset the x set with the required columns
 xData <- xData[, reqFeatures]
 
 # 3. Use descriptive activity names to name the activities in the data set
@@ -63,7 +63,7 @@ allData = cbind(yData,subjectData,xData);
 # 5. Create a second, independent tidy data set with the average of each variable for each activity and each subject. 
 
 # Summarizing the allData table to calculate the mean of each variable by activity and subject
-tidyData = aggregate(allData[,names(allData) != c('activity','subject')],by=list(activity=allData$activity,subject = allData$subject),mean);
+tidyData = aggregate(allData[,names(allData) != c('activity','subject')],by=list(activity=allData$activity,subject = allData$subject),mean)
 
 # Export the tidyData set 
-write.table(tidyData, './tidyData.txt',row.names=TRUE,sep='\t');
+write.table(tidyData, './tidyData.txt',row.names=TRUE,sep='\t')
